@@ -23,12 +23,16 @@ function Header()
       {
         localStorage.getItem('user-info') ?
         <>
+         <Link to="/list" >Product List</Link>
          <Link to="/add" >Add Product</Link>
-         <Link to="/update" >Update Product</Link>
+         
+         <Link to="/search" >Search Product</Link>
+         <Link to="/markingimg" >Marking Image</Link>
+
          </>
          :
          <>
-          <Link to="/login" >Login</Link>
+         <Link to="/login" >Login</Link>
          <Link to="/register" >Register</Link>
          </>
       }

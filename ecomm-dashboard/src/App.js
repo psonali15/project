@@ -7,6 +7,9 @@ import UpdateProduct from './UpdateProduct';
 import Login from './Login';
 import Register from './Register';
 import Protected from './Protected';
+import MarkingImg from './MarkingImg';
+import ProductList from './ProductList';
+import SearchProduct from './SearchProduct';
 
 function App() {
   return (
@@ -17,12 +20,29 @@ function App() {
      <Protected Cmp={AddProduct} />
    {/* <AddProduct /> */}
      </Route>
-     <Route path="/update">
+
+     <Route path="/update/:id">
      <Protected Cmp={UpdateProduct} />
     {/* <UpdateProduct /> */}
      </Route>
+
+      <Route path="/search">
+     <Protected Cmp={SearchProduct} />
+    {/* <UpdateProduct /> */}
+     </Route>
+
+     <Route path="/markingimg">
+     <Protected Cmp={MarkingImg} />
+   {/* <AddProduct /> */}
+     </Route>
+
+    <Route path="/list">
+     <Protected Cmp={ProductList} />
+    </Route>
+
      <Route path="/login"><Login /></Route>
      <Route path="/register"><Register /></Route>  
+     
     </Router>
     </div>
   );
